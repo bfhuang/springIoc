@@ -7,9 +7,9 @@
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <!--define the property files by class path-->
-    <context:property-placeholder location="ioc/person.properties"/>
+    <!--<context:property-placeholder location="classpath:ioc/path.properties"/>-->
     <!--define the property files by file path-->
-     <!--<context:property-placeholder location="file:properties/person.properties"/>-->
+    <context:property-placeholder location="properties/person.properties"/>
 
     <bean id="person" class="com.spring.ioc.Person">
         <constructor-arg index="0">
