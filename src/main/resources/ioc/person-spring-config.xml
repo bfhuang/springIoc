@@ -9,11 +9,24 @@
     <!--define the property files by class path-->
     <context:property-placeholder location="ioc/person.properties"/>
     <!--define the property files by file path-->
+    <!--if you define the application context container by classpath, you have to declare file path explicitly-->
      <!--<context:property-placeholder location="file:properties/person.properties"/>-->
 
     <bean id="person" class="com.spring.ioc.Person">
         <constructor-arg index="0">
             <value>${name}</value>
+        </constructor-arg>
+    </bean>
+
+   <bean id="personFromFactoryStaticMethod" class="com.spring.ioc.PersonFactory" factory-method="createPersonByStaticMethod"/>
+
+    <bean id="personFromFactoryInstanceMethod" factory-bean="factory" factory-method="createPersonByInstanceMethod"/>
+
+    <bean id="factory" class="com.spring.ioc.PersonFactory"/>
+
+    <bean id="innerPerson" class="com.spring.ioc.Person$InnerPerson">
+        <constructor-arg>
+            <value>innerPersonName</value>
         </constructor-arg>
     </bean>
 
