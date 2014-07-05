@@ -30,4 +30,26 @@
         </constructor-arg>
     </bean>
 
+    <bean id="personInjectByConstructorType" class="com.spring.ioc.Person">
+        <constructor-arg  type="int"   value="1"/>
+        <constructor-arg  type="String"  value="personInjectByConstructorTypeName"/>
+    </bean>
+
+    <bean id="personInjectByConstructorIndex" class="com.spring.ioc.Person">
+        <constructor-arg  index="1" type="int"   value="1"/>
+        <constructor-arg index="0"  type="String"  value="personInjectByConstructorIndexName"/>
+    </bean>
+
+    <bean id="personInjectByConstructorArgumentName" class="com.spring.ioc.Person">
+        <constructor-arg  name="age"  value="1"/>
+        <constructor-arg name="name"  value="personInjectByConstructorArgumentName"/>
+    </bean>
+
+    <bean id="personInjectByConstructorArgumentNameWithAnnotation" class="com.spring.ioc.Person">
+        <constructor-arg  name="description"  value="1"/>
+        <constructor-arg name="name"  value="personInjectByConstructorArgumentNameWithAnnotationName"/>
+    </bean>
+
+
+
 </beans>

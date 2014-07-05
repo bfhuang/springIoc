@@ -8,9 +8,6 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-/**
- * Created by twer on 6/22/14.
- */
 public class InstantiatingBeanTest {
 
     private ApplicationContext context = new ClassPathXmlApplicationContext("ioc/person-spring-config.xml");
