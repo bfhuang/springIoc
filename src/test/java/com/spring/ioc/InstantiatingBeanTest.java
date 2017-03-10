@@ -3,7 +3,6 @@ package com.spring.ioc;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

@@ -24,7 +24,11 @@ public class InstantiatingContainerTest {
         Person person = (Person) context.getBean("person");
 
         assertThat(person.getName(),is("Zhiheng"));
+
+
     }
+
+
 
 
 }
