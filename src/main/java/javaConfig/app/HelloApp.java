@@ -1,18 +1,18 @@
 package javaConfig.app;
 
 
-import javaConfig.config.AppConfig;
-import javaConfig.hello.HelloWorld;
+import javaConfig.config.HelloConfig;
+import javaConfig.model.HelloWorld;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class App {
+public class HelloApp {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(HelloConfig.class);
         HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 
         obj.printHelloWorld("Spring3 Java Config");

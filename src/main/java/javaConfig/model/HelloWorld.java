@@ -1,4 +1,4 @@
-package javaConfig.hello;
+package javaConfig.model;
 
 public interface HelloWorld {
 

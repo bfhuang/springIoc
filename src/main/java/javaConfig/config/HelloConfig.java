@@ -1,13 +1,13 @@
 package javaConfig.config;
 
 
-import javaConfig.hello.HelloWorld;
-import javaConfig.hello.impl.HelloWorldImpl;
+import javaConfig.model.HelloWorld;
+import javaConfig.model.impl.HelloWorldImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig {
+public class HelloConfig {
 
     @Bean(name="helloBean")
     public HelloWorld helloWorld() {

@@ -1,6 +1,6 @@
-package javaConfig.hello.impl;
+package javaConfig.model.impl;
 
-import javaConfig.hello.HelloWorld;
+import javaConfig.model.HelloWorld;
 
 public class HelloWorldImpl implements HelloWorld {
 
