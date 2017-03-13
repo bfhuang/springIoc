@@ -1,6 +1,6 @@
-package javaConfig.config;
+package javaConfig.config.beanType;
 
-import javaConfig.model.Scheduler;
+import javaConfig.model.beanType.Scheduler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

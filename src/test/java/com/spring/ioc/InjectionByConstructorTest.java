@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.text.SimpleDateFormat;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -34,6 +36,14 @@ public class InjectionByConstructorTest {
         assertThat(person.getAge(), is(1));
 
         person= (Person) context.getBean("personInjectByConstructorArgumentNameWithAnnotation");
+
+    }
+
+    @Test
+    public void testName() throws Exception {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
+
+        simpleDateFormat.parse("2017-02-02");
 
     }
 }

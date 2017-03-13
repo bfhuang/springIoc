@@ -1,9 +1,8 @@
-package javaConfig.config;
+package javaConfig.config.beanType;
 
-import javaConfig.model.Customer;
+import javaConfig.model.beanType.Customer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class CustomerConfig {

@@ -1,6 +1,6 @@
-package javaConfig.model;
+package javaConfig.model.beanType;
 
-public class Customer {
+public class Scheduler {
 
     private String name;
 

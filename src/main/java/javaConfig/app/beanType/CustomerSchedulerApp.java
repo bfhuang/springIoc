@@ -1,8 +1,8 @@
-package javaConfig.app;
+package javaConfig.app.beanType;
 
-import javaConfig.config.CustomerSchedulerAppConfig;
-import javaConfig.model.Customer;
-import javaConfig.model.Scheduler;
+import javaConfig.config.beanType.CustomerSchedulerAppConfig;
+import javaConfig.model.beanType.Customer;
+import javaConfig.model.beanType.Scheduler;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
