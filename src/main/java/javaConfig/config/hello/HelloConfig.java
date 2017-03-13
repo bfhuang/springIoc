@@ -5,6 +5,9 @@ import javaConfig.model.hello.HelloWorld;
 import javaConfig.model.hello.impl.HelloWorldImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+
 
 @Configuration
 public class HelloConfig {
