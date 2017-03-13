@@ -16,12 +16,10 @@ public class CustomerService implements InitializingBean, DisposableBean
     }
 
 
-    @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("Init method after properties are set : " + message);
     }
 
-    @Override
     public void destroy() throws Exception {
         System.out.println("Spring Container is destroy! Customer clean up");
     }
