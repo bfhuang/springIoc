@@ -3,9 +3,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="customerService" class="initCleanup.CustomerService"
-          init-method="initIt" destroy-method="cleanUp">
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
+    <bean id="customerService" class="com.mkyong.customer.services.CustomerService">
         <property name="message" value="i'm property message" />
     </bean>
 
