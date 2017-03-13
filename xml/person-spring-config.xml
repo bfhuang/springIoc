@@ -11,7 +11,7 @@
     <!--define the property files by file path-->
     <context:property-placeholder location="properties/person.properties"/>
 
-    <bean id="person" class="com.spring.ioc.Person">
+    <bean id="person" class="ioc.iocExample.Person">
         <constructor-arg index="0">
             <value>${name}</value>
         </constructor-arg>
