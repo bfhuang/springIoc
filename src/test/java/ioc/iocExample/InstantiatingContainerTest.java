@@ -12,7 +12,7 @@ public class InstantiatingContainerTest {
 
 	@Test
 	public void instantiatingContainerByFilePath(){
-		ApplicationContext context = new FileSystemXmlApplicationContext("xml/person-spring-config.xml");;
+		ApplicationContext context = new FileSystemXmlApplicationContext("xml/person-springaop-config.xml");;
 		Person person = (Person) context.getBean("person");
 
 		assertThat(person.getName(),is("Zhiheng"));

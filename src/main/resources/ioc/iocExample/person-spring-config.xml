@@ -36,7 +36,7 @@
     </bean>
 
     <bean id="personInjectByConstructorIndex" class="ioc.iocExample.Person">
-    <!--spring can convert the string value to all built-in types(like long,int,boolean) by default -->
+    <!--springaop can convert the string value to all built-in types(like long,int,boolean) by default -->
         <constructor-arg  index="1" type="int"   value="1"/>
         <constructor-arg index="0"  type="String"  value="personInjectByConstructorIndexName"/>
     </bean>

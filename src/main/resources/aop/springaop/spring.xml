@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customer" class="aop.springaop.CustomerImp"/>
+
+    <bean id="hijackAroundMethodBeanAdvice" class="aop.springaop.HijackAroundMethod"/>
+
+    <bean id="customerPointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+        <property name="mappedName" value="addCustomer"/>
+    </bean>
+
+    <bean id="customerAdvisor"
+          class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <property name="pointcut" ref="customerPointcut"/>
+        <property name="advice" ref="hijackAroundMethodBeanAdvice"/>
+    </bean>
+
+    <bean id="customerProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="customer"/>
+        <property name="interceptorNames">
+            <list>
+                <value>customerAdvisor</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="product" class="aop.springaop.Product"/>
+
+    <bean id="productAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="patterns">
+            <list>
+                <value>.*addProduct.*</value>
+            </list>
+        </property>
+        <property name="advice" ref="hijackAroundMethodBeanAdvice"/>
+    </bean>
+    <bean id="productProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="product"/>
+        <property name="interceptorNames">
+            <list>
+                <value>productAdvisor</value>
+            </list>
+        </property>
+    </bean>
+</beans>
