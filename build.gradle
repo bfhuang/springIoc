@@ -11,10 +11,15 @@ ext {
 }
 
 dependencies {
-    compile "org.springframework:springaop-context:${springVersion}",
+    compile "org.springframework:spring-context:${springVersion}",
             "org.springframework:springaop-aop:${springVersion}",
             'org.aspectj:spectjrt:1.6.11',
-            'org.aspectj:aspectjweaver:1.6.11'
+            'org.aspectj:aspectjweaver:1.6.11',
+
+            "org.springframework:spring-oxm:${springVersion}",
+            'org.codehaus.castor:castor:1.2',
+            'xerces:xercesImpl:2.8.1'
+//    cglib has already been added to spring it'sself  from spring 3.2
 //            'cglib:cglib:2.2.2'
 
 
